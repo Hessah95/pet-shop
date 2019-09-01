@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Detail{% endblock title %}
+
+{% block content %}
+<br>
+<div class="row container-fluid" style="margin-top:80px">
+    <div class="col-12 card border-0 text-center">
+
+    {% if pet.image %}
+        <div class="img-card">
+        <img src="{{pet.image.url}}" alt=" " class="img-fluid">
+        </div> <!-- end of img-card -->
+    {% endif %}
+    <br>
+
+    <h1>Name: {{pet.name}}</h1>
+    <p>Age: {{pet.age}}</p>
+    <p>Price: {{pet.price}} KD</p>
+
+    <div class="pb-5">
+
+    <a class="btn btn-outline-primary active" role="button" aria-pressed="true" href="{{pet.get_absolute_url}}">Update</a>
+    <a class="btn btn-outline-danger active" role="button" aria-pressed="true" href="{{pet.get_absolute_url}}">Delete</a>
+
+    </div>
+   
+    </div> <!-- end of card -->
+</div> <!-- end of row -->
+
+{% endblock content %}

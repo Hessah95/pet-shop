@@ -1,0 +1,30 @@
+<div class="container" style="color: #CD5C5C;">
+<h1>Helloooooo</h1>
+<h3>Welcome to my PET shop...</h3>
+<h5>I’m so glad you’re here. Feel free to browse around..</h5>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #FFA07A;">
+        <a class="navbar-brand" href="{% url 'pet-list' %}">PetShop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link">{{request.user}}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'create-pet' %}">Create a pet</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" name='q' placeholder="search here ..." value="{{request.GET.q}}">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+
+    </nav>
