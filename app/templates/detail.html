@@ -20,8 +20,8 @@
 
     <div class="pb-5">
 
-    <a class="btn btn-outline-primary active" role="button" aria-pressed="true" href="{{pet.get_absolute_url}}">Update</a>
-    <a class="btn btn-outline-danger active" role="button" aria-pressed="true" href="{{pet.get_absolute_url}}">Delete</a>
+    <a class="btn btn-outline-primary active" role="button" aria-pressed="true" href="{% url 'update-pet' pet.id %}">Update</a>
+    <a class="btn btn-outline-danger active" role="button" aria-pressed="true" href="{% url 'delete-pet' pet.id %}">Delete</a>
 
     </div>
    
